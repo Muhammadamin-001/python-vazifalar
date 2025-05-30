@@ -1,20 +1,20 @@
 ''' Masalalar to'plami'''
 '''#1.'''
-# print("Uchta sonni kichigini chiqaruvchi dastur!")
-# min=0
-# sonlar=[]
-# for raqam in range(1,4):
-#     son=input(f"{raqam}-son:")
-#     son=float(son)
-#     sonlar.append(son)
-#     min=sonlar[0]
-# for n in range(3):
-#     if min>=sonlar[n]:
-#         min=sonlar[n]
-# print(f"Natija: {min}")
+print("Uchta sonni kichigini chiqaruvchi dastur!")
+min=0
+sonlar=[]
+for raqam in range(1,4):
+    son=input(f"{raqam}-son:")
+    son=float(son)
+    sonlar.append(son)
+    min=sonlar[0]
+for n in range(3):
+    if min>=sonlar[n]:
+        min=sonlar[n]
+print(f"Natija: {min}")
 
 
-'''2. Kiritigan yilda jami necha kun borligini chiqaruvchi dastur'''
+'''#2. Kiritigan yilda jami necha kun borligini chiqaruvchi dastur'''
 # yil=int(input("yil:"))
 # n="Natija:"
 # if yil%100==0:
