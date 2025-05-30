@@ -1,5 +1,5 @@
 ''' Masalalar to'plami'''
-# #1.
+'''#1.'''
 # print("Uchta sonni kichigini chiqaruvchi dastur!")
 # min=0
 # sonlar=[]
@@ -7,8 +7,8 @@
 #     son=input(f"{raqam}-son:")
 #     son=float(son)
 #     sonlar.append(son)
-# for n in range(3):
 #     min=sonlar[0]
+# for n in range(3):
 #     if min>=sonlar[n]:
 #         min=sonlar[n]
 # print(f"Natija: {min}")
