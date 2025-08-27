@@ -354,4 +354,63 @@ def MonthDays(month, year): # 30-masaladagi funksiyadan foydalanilgan
 #         print(son_A[n-i])
 #         break
 
-'''#36'''
+'''#36 lokal maksimumlari orasidan kichigi'''
+    
+# def soni(n):
+#     sonlar=[]
+#     for i in range(n):
+#         sonlar.append(int(input()))
+        
+#     lokalmax=[]
+#     for k in range(1, n):
+#         max=sonlar[k-1]
+#         if k+1!=n:
+#             if sonlar[k]>max and sonlar[k]>sonlar[k+1]:
+#                 lokalmax.append(sonlar[k])
+#     min=int(lokalmax[0])
+#     for m in lokalmax:
+#         if m<min:
+#             min=m
+#     Natija=min
+    
+#     return Natija
+ 
+# n=int(input('N='))               
+# print('Natija:', soni(n))
+
+'''#37. R ga eng yaqin son'''
+
+# def soni(n, r):
+#     sonlar=[]
+#     print('Sonlar kiriting:')
+#     for i in range(n):
+#         sonlar.append(int(input()))
+
+#     yaqin=sonlar[0]
+#     son=0
+#     min=abs(r-yaqin)
+#     for k in sonlar:
+#         son=abs(r-k)
+#         if son<min:
+#             min=son
+#             yaqin=k
+#         else:
+#             continue
+#     natija=yaqin
+#     return natija
+
+# print('Natija', soni(8, 5))
+
+
+
+
+
+        
+      
+    
+
+
+
+
+
+

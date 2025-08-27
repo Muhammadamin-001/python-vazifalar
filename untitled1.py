@@ -1,46 +1,112 @@
 # -*- coding: utf-8 -*-
 """
-Created on Thu May 22 15:04:14 2025
+Created on Tue Jul 22 19:01:27 2025
 
 @author: Asus
 """
 
-def isLeapYear(yil):
-    javob=False
-    if yil%100==0: #100 ga karrali yillar, 400 ga bo'linsa.
-        if yil%400==0:
-            javob=True
-    elif yil%4==0: # 4 ga karrali b-sa kabisa yil.
-        javob=True
-    return javob
+'''Robocontest'''
+ #1
+def meets(n, a, b):
+    if n>=b and b>=a:
+        if (a+b)%2==0:
+            natija='Yes'
+        else:
+            natija='No'
+    else:
+        natija='xatolik!'
+    return natija
 
-def MonthDays(month, year): # 30-masaladagi funksiyadan foydalanilgan
-    day=0
-    if isLeapYear(year) and month==2:
-        day=29
-    elif month==2:
-        day=28
-    elif month==4 or month==6 or month==9 or month==11: #shu tartibdagi 
-        day=30                  #oylarda 30 kun bor
-    else:    #qolgan oylar 31 kun ekan
-        day=31
-    return day
-
-year=int(input("Yil:"))
-days=256 #256-kuni kerak
-month=0
-
-for m in range(1, 13):
-    days-= MonthDays(m, year) #yil orqali oldingi oyda necha kun borligini bilib,
-    month=m               #256 dan ayirib boramiz! m-bu yerda oy hisoblanadi
-    if days<=0: #kunlar tugagach sana o'tib ketgan hisoblanadi.
-        day=MonthDays(m, year)-(-days) #manfiy o'tgan kunni ayirib topamiz
-        break
-
-print(f"{str(day).zfill(2)}/{str(month).zfill(2)}/{str(year).zfill(4)}")
+# n, a, b=map(int, input("Qimatlar:\t").split())
+# print(meets(n, a, b))
 
 
+ #2
+def get_im(x, y, z):
+    
+     return lambda a: 'IM' if a>=x else 'IM emas'
+   
+# x, y, z=map(int, input('->').split())
+# if 0<=x<=700 and y+z<=7:
+#     if 0<=y<=7 and 0<=z<=7:
+#         natija=get_im(x, y, z)
+        
+#         x1,x2,x3,x4,x5,x6,x7=map(int, input('->>').split())
+#         adds=x1+x2+x3+x4+x5+x6+x7
+        
+#         print(natija(adds))
+
+
+ #3  Eldor volybol turnirida
+# def attempt(N, K):
+#     sign=input('->>').lower()
+#     if len(sign)!=N:
+#         natija='No'
+#     else:
+#         c=0
+#         ball=0
+#         for n in sign:
+                 
+#             if n=='s':
+#                 ball+=1
+#                 c+=1 
+#             elif n=='p':
+#                 ball+=2
+#                 c+=1 
+#             elif n=='f':
+#                 c=0
+                
+#             if c>K:
+#                 natija='No'
+#                 break
+#             else:
+#                 natija='Yes'
+    
+#     print(natija)
+#     if natija!='No':
+#         print(ball)
+               
+# N, K=map(int, input('->').split())
+# attempt(N, K)
+        
+
+ #4. 
 
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 

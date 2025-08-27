@@ -5,7 +5,7 @@ Created on Sat May 24 17:18:54 2025
 @author: Asus
 """
 
-'''#0009.Yolg'iz son'''
+'''Robocontest #0009.Yolg'iz son'''
 
 def single_n(N):
     sonlar=[]
