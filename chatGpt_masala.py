@@ -4,6 +4,7 @@ Created on Mon Aug 11 14:24:29 2025
 
 @author: Asus
 """
+#Eng katta son necha marta qatnashgan
 
 def larger(num):
     max_num=num[0]
