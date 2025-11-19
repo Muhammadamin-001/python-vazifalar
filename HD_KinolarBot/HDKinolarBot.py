@@ -3,6 +3,8 @@ from telebot import types
 import json
 import time
 import requests
+from flask import Flask, request
+import os
 
 TOKEN = '8355160126:AAEl-Ul_QLI1I7AwkHPfE1_r4a2MUC0MISU'
 ADMIN_ID = "8213048876" #A
@@ -12,7 +14,7 @@ bot = telebot.TeleBot(TOKEN)
 
 kanal_link="https://t.me/DubHDkinolar"
 
-
+app = Flask(__name__)
 
 # ====================== DB YUKLASH ============================
 try:
@@ -495,24 +497,25 @@ def universal_handler(msg):
     else:
         bot.send_message(msg.chat.id, "❌ Bunday kod bo‘yicha kino topilmadi.")
 
+
+
+
+@app.route('/' + TOKEN, methods=['POST'])
+def webhook():
+    json_str = request.get_data().decode('utf-8')
+    update = telebot.types.Update.de_json(json_str)
+    bot.process_new_updates([update])
+    return "ok", 200
+
+# Just to test server
+@app.route('/')
+def index():
+    return "Bot is running"
+
+if __name__ == '__main__':
+    bot.remove_webhook()
+    bot.set_webhook(url="https://YOUR-RENDER-APP-NAME.onrender.com/" + TOKEN)
+    app.run(host="0.0.0.0", port=5000)
 # ==============================================================#
-#bot.polling(none_stop=True, timeout=60, long_polling_timeout=60)
-
-#bot.polling()
-
-
-while True:
-    try:
-        bot.polling(non_stop=True, timeout=60, long_polling_timeout=60)
-    except requests.exceptions.ReadTimeout:
-        print("⚠️ ReadTimeout — bot qayta ishga tushmoqda...")
-        time.sleep(1)
-        continue
-    except requests.exceptions.ConnectionError:
-        print("⚠️ ConnectionError — internet uzildi. Qayta urinish...")
-        time.sleep(2)
-        continue
-    except Exception as e:
-        print("❗ Noma'lum xatolik:", e)
-        time.sleep(2)
-        continue
+    
+    
